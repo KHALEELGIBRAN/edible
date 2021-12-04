@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable/bg.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable/btn_add.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable/btn_buy.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable/btn_log.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable/btn_qty.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable/ic_menu_camera.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/drawable/side_nav_bar.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/activity_admin_item_category.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/activity_forget_password.xml" value="0.22" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/activity_item_category.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/activity_sign_up.xml" value="0.18026796589524968" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/content_item_category.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_add.xml" value="0.20441988950276244" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_admin_settings.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_cart.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_contact.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_customer.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_delete.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_gallery.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_orderDetails.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_order_id.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_payment.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_print.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_settings.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_share.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/fragment_update.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/nav_admin_header.xml" value="0.5" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/layout/nav_header.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/menu/activity_main_drawer.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/menu/drawer_admin_menu.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/menu/drawer_adminmenu.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/menu/drawer_menu.xml" value="0.1" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/menu/item_category.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/khale/AndroidStudioProjects/Edible/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

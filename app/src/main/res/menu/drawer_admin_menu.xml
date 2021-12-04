@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/add"
+            android:title="Add"
+            >
+        </item>
+
+        <item android:id="@+id/delete"
+            android:title="Delete"
+            >
+
+        </item>
+
+        <item android:id="@+id/update"
+            android:title="Update"
+            >
+
+        </item>
+
+        <item android:id="@+id/print"
+            android:title="Print"
+            >
+
+        </item>
+ 
+        <item android:id="@+id/admin_settings"
+            android:title="Settings"
+            >
+
+        </item>
+
+    </group>
+
+    <item android:title="Authorised Admin Access only">
+
+        <menu>
+            <item
+                android:id="@+id/customer"
+                android:title="Customer Details">
+
+            </item>
+
+            <item
+                android:id="@+id/order_id"
+                android:title="Order ID"
+                >
+
+            </item>
+
+        </menu>
+    </item>
+</menu>
