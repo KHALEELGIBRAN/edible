@@ -1,18 +1,366 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Red"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Teal"
+    android:orientation="vertical"
+
     >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"
-        android:textSize="60sp"
-        android:layout_centerInParent="true"
-        >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-</RelativeLayout>
+
+            <TextView
+                android:id="@+id/tex_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="DELETE"
+                android:textAlignment="center"
+                android:textColor="@color/Yellow"
+                android:textSize="50dp">
+
+            </TextView>
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/image_add"
+                android:layout_below="@id/tex_add">
+
+            </ImageView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Product_ID"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Product ID"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Category"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Product_ID"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+
+                >
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Category"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp">
+
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Product_Name"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Category"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Product Name"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Details"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Product_Name"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Details"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Quantity"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Details"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Quantity"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp"
+
+                    >
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/MDF"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Quantity"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Quantity"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp"
+
+                    >
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Exp_Date"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/MDF"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Exp Date"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp"
+
+                    >
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Price"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Exp_Date"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Price"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp"
+
+                    >
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/GST"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Price"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="GST %"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp"
+
+                    >
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Remaining_Qty"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/GST"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Remaining Qty"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp"
+
+                    >
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Remarks"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Remaining_Qty"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_log"
+                    android:hint="Remarks"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15dp"
+
+                    >
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/Remarks"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/btn_add"
+                android:gravity="center"
+                android:layout_marginBottom="50dp"
+                android:text="ADD">
+
+
+            </Button>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
