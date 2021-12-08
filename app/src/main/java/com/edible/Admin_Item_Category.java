@@ -2,6 +2,7 @@ package com.edible;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,6 +16,7 @@ import com.google.android.material.navigation.NavigationView;
 public class Admin_Item_Category extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,12 +91,6 @@ public class Admin_Item_Category extends AppCompatActivity implements Navigation
         return true;
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)){
-            drawer.closeDrawer(GravityCompat.START);
-        }else {
-        super.onBackPressed();
-        }
-    }
+
+
 }

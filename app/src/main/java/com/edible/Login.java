@@ -1,8 +1,10 @@
 package com.edible;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -29,7 +31,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        admin = findViewById(R.id.admin);
+         admin = findViewById(R.id.admin);
          signup = findViewById(R.id.signup);
         String text = "Not Registered? SignUp";
         SpannableString ss = new SpannableString(text);
@@ -83,6 +85,33 @@ public class Login extends AppCompatActivity {
                 startActivity(sing);
             }
         });
+        
+        
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+
+        new AlertDialog.Builder(this)
+                .setTitle("Exit Edible")
+                .setMessage("Are you sure you want to Exit?")
+                .setPositiveButton("Yes",new DialogInterface.OnClickListener(){
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which){
+                        //super.onBackPressed();
+                        //Or used finish();
+
+
+                        finishAffinity();
+                        System.exit(0);
+                    }
+                })
+                .setNegativeButton("No",null)
+                .show();
 
     }
 }

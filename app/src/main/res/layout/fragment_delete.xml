@@ -352,7 +352,8 @@
                 android:background="@drawable/btn_add"
                 android:gravity="center"
                 android:layout_marginBottom="50dp"
-                android:text="ADD">
+                android:text="Delete"
+                app:backgroundTint="@null">
 
 
             </Button>

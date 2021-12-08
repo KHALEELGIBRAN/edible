@@ -8,6 +8,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -40,10 +42,10 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
 
         if (savedInstanceState == null){
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new HomeFragment()).commit();
-        navigationView.setCheckedItem(R.id.home);
-            }
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new HomeFragment()).commit();
+            navigationView.setCheckedItem(R.id.home);
+        }
 
     }
 
@@ -98,10 +100,25 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
 
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)){
-            drawer.closeDrawer(GravityCompat.START);
-        }else {
-        super.onBackPressed();
-        }
+        //super.onBackPressed();
+
+        new AlertDialog.Builder(this)
+                .setTitle("Exit Edible")
+                .setMessage("Are you sure you want to Exit?")
+                .setPositiveButton("Yes",new DialogInterface.OnClickListener(){
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which){
+                        //super.onBackPressed();
+                        //Or used finish();
+
+
+                        finishAffinity();
+                        System.exit(0);
+                    }
+                })
+                .setNegativeButton("No",null)
+                .show();
+
     }
 }
