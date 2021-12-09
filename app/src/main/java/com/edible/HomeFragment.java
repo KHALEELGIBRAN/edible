@@ -34,11 +34,17 @@ public class HomeFragment extends Fragment  {
             public void onClick(View view) {
 
 
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container,new HomeGrocery());
+                fragmentTransaction.commit();
+
+                if (getFragmentManager().getBackStackEntryCount() > 0){
+                    boolean done = getFragmentManager().popBackStackImmediate();
+
+                }
 
 
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container,new HomeGrocery());
-                fr.commit();
             }
         });
 
@@ -47,9 +53,15 @@ public class HomeFragment extends Fragment  {
             public void onClick(View view) {
 
 
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container,new HomeMeat());
-                fr.commit();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container,new HomeMeat());
+                fragmentTransaction.commit();
+
+                if (getFragmentManager().getBackStackEntryCount() > 0){
+                    boolean done = getFragmentManager().popBackStackImmediate();
+
+                }
             }
         });
 
@@ -58,9 +70,15 @@ public class HomeFragment extends Fragment  {
             public void onClick(View view) {
 
 
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container,new HomeBakery());
-                fr.commit();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container,new HomeBakery());
+                fragmentTransaction.commit();
+
+                if (getFragmentManager().getBackStackEntryCount() > 0){
+                    boolean done = getFragmentManager().popBackStackImmediate();
+
+                }
             }
         });
 
@@ -69,9 +87,15 @@ public class HomeFragment extends Fragment  {
             public void onClick(View view) {
 
 
-                FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container,new HomeDrinks());
-                fr.commit();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container,new HomeDrinks());
+                fragmentTransaction.commit();
+
+                if (getFragmentManager().getBackStackEntryCount() > 0){
+                    boolean done = getFragmentManager().popBackStackImmediate();
+
+                }
             }
         });
 
@@ -81,7 +105,11 @@ public class HomeFragment extends Fragment  {
 
 
 
+
+
     }
+
+
 
 
 

@@ -45,6 +45,9 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.home);
+
+
+
         }
 
     }
@@ -61,6 +64,7 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
             case R.id.profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ProfileFragment()).commit();
+
                 break;
 
             case R.id.cart:
@@ -86,39 +90,49 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
             case R.id.share:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ShareFragment()).commit();
+
                 break;
 
             case R.id.contact:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ContactFragment()).commit();
                 break;
+
+            case R.id.logout:
+                Intent sing = new Intent(Item_Category.this,Login.class);
+                startActivity(sing);
+                break;
         }
+
+
+
         drawer.closeDrawer(GravityCompat.START);
+
 
         return true;
     }
 
-    @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
-
-        new AlertDialog.Builder(this)
-                .setTitle("Exit Edible")
-                .setMessage("Are you sure you want to Exit?")
-                .setPositiveButton("Yes",new DialogInterface.OnClickListener(){
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which){
-                        //super.onBackPressed();
-                        //Or used finish();
-
-
-                        finishAffinity();
-                        System.exit(0);
-                    }
-                })
-                .setNegativeButton("No",null)
-                .show();
-
-    }
+//    @Override
+//    public void onBackPressed() {
+//        //super.onBackPressed();
+//
+//        new AlertDialog.Builder(this)
+//                .setTitle("Exit Edible")
+//                .setMessage("Are you sure you want to Exit?")
+//                .setPositiveButton("Yes",new DialogInterface.OnClickListener(){
+//
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which){
+//                        //super.onBackPressed();
+//                        //Or used finish();
+//
+//
+//                        finishAffinity();
+//                        System.exit(0);
+//                    }
+//                })
+//                .setNegativeButton("No",null)
+//                .show();
+//
+//    }
 }
