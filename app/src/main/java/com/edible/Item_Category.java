@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -20,7 +21,12 @@ import com.google.android.material.navigation.NavigationView;
 
 public class Item_Category extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+
+
+
+
     private DrawerLayout drawer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,26 +41,27 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this,drawer,toolbar,
-                R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        if (savedInstanceState == null){
+        if (savedInstanceState == null) {
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.home);
 
 
-
         }
+
 
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
 
             case R.id.home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -64,6 +71,7 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
             case R.id.profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ProfileFragment()).commit();
+
 
                 break;
 
@@ -99,11 +107,11 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
                 break;
 
             case R.id.logout:
-                Intent sing = new Intent(Item_Category.this,Login.class);
+                Intent sing = new Intent(Item_Category.this, Login.class);
                 startActivity(sing);
                 break;
-        }
 
+        }
 
 
         drawer.closeDrawer(GravityCompat.START);
@@ -112,27 +120,18 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
         return true;
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        //super.onBackPressed();
-//
-//        new AlertDialog.Builder(this)
-//                .setTitle("Exit Edible")
-//                .setMessage("Are you sure you want to Exit?")
-//                .setPositiveButton("Yes",new DialogInterface.OnClickListener(){
-//
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which){
-//                        //super.onBackPressed();
-//                        //Or used finish();
-//
-//
-//                        finishAffinity();
-//                        System.exit(0);
-//                    }
-//                })
-//                .setNegativeButton("No",null)
-//                .show();
-//
-//    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+            return;
+        }
+        if (getFragmentManager().getBackStackEntryCount() != 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
