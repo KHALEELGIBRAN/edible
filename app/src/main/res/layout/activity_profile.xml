@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile_activity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/s_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/Teal"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/settings_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back_arrow"
+            android:layout_marginLeft="20dp"
+            >
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/s_toolbar"
+        android:layout_marginTop="55dp"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:text="Profile"
+        >
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

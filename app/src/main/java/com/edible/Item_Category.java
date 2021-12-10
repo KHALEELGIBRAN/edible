@@ -50,6 +50,7 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
+
             navigationView.setCheckedItem(R.id.home);
 
 
@@ -66,43 +67,45 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
             case R.id.home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment()).commit();
+
                 break;
 
             case R.id.profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ProfileFragment()).commit();
-
-
+                Intent c = new Intent(Item_Category.this, profile_activity.class);
+                startActivity(c);
                 break;
 
+
+
             case R.id.cart:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
                         new CartFragment()).commit();
+
                 break;
 
             case R.id.order_details:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new OrderFragment()).commit();
+                Intent b = new Intent(Item_Category.this, order_activity.class);
+                startActivity(b);
                 break;
 
             case R.id.payment:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
                         new PaymentFragment()).commit();
                 break;
 
             case R.id.settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new SettingsFragment()).commit();
+                Intent a = new Intent(Item_Category.this, settings_activity.class);
+                startActivity(a);
                 break;
 
             case R.id.share:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
                         new ShareFragment()).commit();
 
                 break;
 
             case R.id.contact:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container,
                         new ContactFragment()).commit();
                 break;
 
@@ -124,14 +127,15 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
     @Override
     public void onBackPressed() {
 
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
             return;
         }
-        if (getFragmentManager().getBackStackEntryCount() != 0) {
-            getFragmentManager().popBackStack();
-        } else {
+        if (getFragmentManager().getBackStackEntryCount() == 0) {
             super.onBackPressed();
+        } else {
+            getFragmentManager().popBackStack();
         }
     }
 }

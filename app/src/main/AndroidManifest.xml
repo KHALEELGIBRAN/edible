@@ -10,23 +10,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Edible">
-
-
-
-
+        <activity
+            android:name=".profile_activity"
+            android:exported="false" />
+        <activity
+            android:name=".order_activity"
+            android:exported="false" />
+        <activity
+            android:name=".settings_activity"
+            android:exported="false" />
         <activity
             android:name=".HomeFragment"
             android:exported="true"
-            tools:ignore="Instantiatable"
-            android:launchMode="singleTop"/>
-
+            android:launchMode="singleTop"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Admin_Item_Category"
             android:exported="true" />
         <activity
             android:name=".Item_Category"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".forget_password"
             android:exported="true" />
