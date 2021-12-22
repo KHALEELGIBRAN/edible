@@ -31,10 +31,10 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/grocery"
                     android:text="Grocery"
-                    app:backgroundTint="@null"
                     android:textColor="@color/white"
                     android:textSize="34dp"
-                    android:textStyle="bold">
+                    android:textStyle="bold"
+                    app:backgroundTint="@null">
 
                 </Button>
 

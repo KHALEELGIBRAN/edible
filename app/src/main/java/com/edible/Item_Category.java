@@ -8,6 +8,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -19,8 +21,9 @@ import com.google.android.material.internal.NavigationMenuView;
 import com.google.android.material.navigation.NavigationBarMenuView;
 import com.google.android.material.navigation.NavigationView;
 
-public class Item_Category extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.ArrayList;
 
+public class Item_Category extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
 
@@ -32,6 +35,7 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_category);
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -49,7 +53,7 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
         if (savedInstanceState == null) {
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HomeFragment()).commit();
+                    new HomeFragment1()).commit();
 
             navigationView.setCheckedItem(R.id.home);
 
@@ -66,7 +70,7 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
 
             case R.id.home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HomeFragment()).commit();
+                        new HomeFragment1()).commit();
 
                 break;
 
@@ -74,7 +78,6 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
                 Intent c = new Intent(Item_Category.this, profile_activity.class);
                 startActivity(c);
                 break;
-
 
 
             case R.id.cart:
@@ -138,4 +141,6 @@ public class Item_Category extends AppCompatActivity implements NavigationView.O
             getFragmentManager().popBackStack();
         }
     }
+
+
 }
